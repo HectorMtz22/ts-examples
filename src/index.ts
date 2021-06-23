@@ -6,7 +6,7 @@ const port = 3001
 
 app.use(express.json())
 
-app.use('/', router) // Imports all router
+app.use('/', router) // Imports all routes 
 
 app.listen(port, () => {
     // Cuando funcione
