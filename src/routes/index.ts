@@ -1,8 +1,8 @@
+import User from './User'
 import express from 'express'
-const router = express.Router()
 
-router.get('/', (_, res) => {
-    res.send("Hola bro")
-})
+const app = express()
 
-export default router
+app.use('/user', User)
+
+export default app
