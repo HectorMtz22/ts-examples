@@ -1,8 +1,5 @@
-let foo: bigint = BigInt(100); // the BigInt function
-let bar: bigint = 100n; // a BigInt literal
-// *Slaps roof of fibonacci function*
 // This bad boy returns ints that can get *so* big!
-function fibonacci(n: bigint) {
+export function fibonacci(n: bigint) {
   let result = 1n;
   for (let last = 0n, i = 0n; i < n; i++) {
     const current = result;
@@ -11,4 +8,3 @@ function fibonacci(n: bigint) {
   }
   return result;
 }
-fibonacci(10000n);

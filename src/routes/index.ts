@@ -1,11 +1,12 @@
-import express from 'express'
-import User from './User'
-import FileAccess from './FileAccess'
+import express from "express";
+import User from "./User";
+import FileAccess from "./FileAccess";
+import Fibonacci from "./Fibonacci";
 
+const app = express();
 
-const app = express()
+app.use("/user", User);
+app.use("/file", FileAccess);
+app.use("/fibonacci", Fibonacci);
 
-app.use('/user', User)
-app.use('/file', FileAccess)
-
-export default app
+export default app;
