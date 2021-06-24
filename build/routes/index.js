@@ -4,12 +4,9 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var express_1 = __importDefault(require("express"));
-var routes_1 = __importDefault(require("./routes"));
+var User_1 = __importDefault(require("./User"));
+var FileAccess_1 = __importDefault(require("./FileAccess"));
 var app = express_1.default();
-var port = 3001;
-app.use(express_1.default.json());
-app.use('/', routes_1.default); // Imports all routes 
-app.listen(port, function () {
-    // Cuando funcione
-    console.log("Estamos al aire!");
-});
+app.use('/user', User_1.default);
+app.use('/file', FileAccess_1.default);
+exports.default = app;
